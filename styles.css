@@ -25,9 +25,7 @@ body {
 }
 
 .navbar {
-
     top: 0;
-
     z-index: 100;
     height: 3rem;
 }
@@ -76,46 +74,47 @@ body {
 
 .img-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px; 
+    padding: 10px;
     margin-top: 5rem;
 }
 
 .img-item {
-    flex: 1 1 301px;
-    flex-direction: column;
+    position: relative;
     overflow: hidden;
-    margin: 0 0 40px;
-    padding: 0 20px 40px;
-    min-height: 220px;
-    border-bottom: 1px solid #eaeff1;
-    border-bottom-color: rgb(234, 239, 241);
+    border-radius: 8px;
     background-size: cover;
+    margin: 5px;
 
 }
 
 .img-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .img-item h3 {
     margin: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: black;
 }
 
 .img-item p {
-    width: auto;
-    height: auto;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-
-    font-size: 14px;
-    display: flex;
+    position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      font-size: 14px;
+    border: beige solid 2px;
+    
 }
 
 .background-top-travel {
@@ -128,6 +127,71 @@ body {
 
 .background-top-travel img {
     object-fit: cover;
-    height: 100%;
+    height: 15rem;
     width: 100%;
     position: relative;
+
+}
+
+.picture-description {
+    border: beige solid 2px;
+    
+}
+
+/*css for projects page*/
+
+.ad-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    grid-auto-rows: minmax(100px, auto);
+    width: 100vw;
+}
+
+.ad-one {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: red;
+    z-index: 1;
+    
+}
+.ad-two {
+    grid-column: 2 / 4;
+    grid-row: 2 / 5;
+    background-color: blue;
+    
+    
+  }
+  .ad-three {
+    grid-column: 1;
+    grid-row: 1 / 8;
+    background-color: white;
+  }
+  .ad-four {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: yellow;
+  }
+  .ad-five {
+    grid-column: 2;
+    grid-row: 4;
+    background-color: green
+  }
+  .ad-six {
+    grid-column: 3;
+    grid-row: 4;
+    background-color: aqua;
+  }
+
+  #content {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    margin: auto 0;
+    
+    
+  }
+
+  #gif {
+    
+  }
