@@ -7,18 +7,51 @@
                Projects
           </title>
           <link rel="stylesheet" href="styles.css" type="text/css" />
-         
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
      </head>
      <body>
+          <div id="fullscreen-ad">
+               <div>
+                   <h1>Special Offer!</h1>
+                   <p>Get 50% off on nothing. Click now!</p>
+          </div>
+          </div>
+
+          <div id="banner-ad">
+               <p>MICROSOFT COPILOT!!!!</p>
+          </div>
+
+          <div class="popup-ad" id="popup-ad">
+               <p>We love your data</p>
+          </div>
+
           <div class="ad-container">
-               <div class="ad-one">One</div>
-               <div class="ad-two">Two</div>
-               <div class="ad-three">Three</div>
                <div id="content">Content <iframe id="gif" src="https://giphy.com/embed/lJNoBCvQYp7nq" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reddit-doing-lJNoBCvQYp7nq">via GIPHY</a></p></div>
-               <div class="ad-four">Four</div>
-               <div class="ad-five">Five</div>
-               <div class="ad-six">Six</div>
+               <div id="smoke-ad"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fresearchleap.com%2Fwp-content%2Fuploads%2F2015%2F11%2FImpact-Of-Unethical-Advertising-Misleading-Information-Or-Deceptive-Advertising-On-Customer-Purchasing-Intention-With-Mediating-Effect-Of-Word-Of-Mouth-In-Pakistan.jpg&f=1&nofb=1&ipt=5e4003a15c85321b5d011f58d0a6fce055e7f06f8e6ba77d2b9817ddcdbaba88&ipo=images"></div>
              </div>
              
+             <script>
+               //destroy the ads
+               $(document).ready(function () {
+                    //this banner ad will not show for some reason
+                    $("#banner-ad").click(function () {
+                         $("#banner-ad").remove();
+                   });
+
+                   $("#fullscreen-ad").click(function () {
+                    $("#fullscreen-ad").remove();
+                   });
+       
+                   $('#smoke-ad').click(function () {
+                       $("#smoke-ad").remove();
+                   });
+
+                   $('#popup-ad').click(function () {
+                       $("#popup-ad").remove();
+                   });
+               });
+           </script>
+
+
      </body>
 </html>

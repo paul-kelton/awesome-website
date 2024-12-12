@@ -143,55 +143,89 @@ body {
 .ad-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    
     grid-auto-rows: minmax(100px, auto);
     width: 100vw;
 }
 
-.ad-one {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    background-color: red;
-    z-index: 1;
-    
+#smoke-ad {
+    position: fixed;
+    left: 50%;
 }
-.ad-two {
-    grid-column: 2 / 4;
-    grid-row: 2 / 5;
-    background-color: blue;
-    
-    
-  }
-  .ad-three {
-    grid-column: 1;
-    grid-row: 1 / 8;
-    background-color: white;
-  }
-  .ad-four {
-    grid-column: 3;
-    grid-row: 3;
-    background-color: yellow;
-  }
-  .ad-five {
-    grid-column: 2;
-    grid-row: 4;
-    background-color: green
-  }
-  .ad-six {
-    grid-column: 3;
-    grid-row: 4;
-    background-color: aqua;
-  }
 
-  #content {
+#content {
     grid-column: 2;
     grid-row: 3;
     text-align: center;
     margin: auto 0;
-    
-    
   }
+    
+#fullscreen-ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
-  #gif {
-    
-  }
+#banner-ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: yellow;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 300000000;
+}
+
+.popup-ad {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: grey;
+    color: red;
+    font-size: xx-large;
+    border: 2px solid black;
+    padding: 20px;
+    z-index: 9998;
+    animation: moveAround 5s infinite alternate;
+}
+
+/*animation*/
+@keyframes moveAround {
+    0% {
+        top: 10%;
+        left: 10%;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 10%;
+        left: 80%;
+        transform: translate(-50%, 0);
+    }
+    50% {
+        top: 70%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        top: 70%;
+        left: 10%;
+        transform: translate(0, -50%);
+    }
+    100% {
+        top: 10%;
+        left: 10%;
+        transform: translate(0, 0);
+    }
+}
+
